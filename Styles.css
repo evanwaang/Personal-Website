@@ -1,0 +1,281 @@
+
+
+@keyframes move-twinkle-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -5000px 2000px;
+	}
+}
+
+@keyframes move-stars-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 0 1000px;
+	}
+}
+
+body {
+background: #000 url(stars.png) repeat-y top center;
+  animation: move-stars-back 200s linear infinite;
+}
+
+
+
+.stars,
+.twinkling {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+.stars {
+    background: #000 url(stars.png) repeat top center;
+    background-repeat: repeat-y;
+	animation: move-stars-back 200s linear infinite;
+}
+
+.twinkling {
+    background: transparent url(twinkling.png) repeat top center;
+    background-repeat: repeat-y;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+
+
+body {
+	margin: 0;
+	font-weight: 300;
+	background-repeat: repeat;
+    background-size: cover;
+}
+
+
+.container {
+	
+	margin: 0 auto;
+	width: 100%;
+}
+
+header {
+	position: sticky;
+	
+
+}
+
+header ::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	
+nav li {
+	display: inline-block;
+	margin-left: 100px;
+	padding-top: 25px;
+	
+
+	position: relative
+}
+
+
+nav a {
+
+	color: whitesmoke;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: white;
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: whitesmoke;
+
+	position: absolute;
+	top: 0;
+	width: 0%;
+
+	transition: all ease-in-out 200ms;
+
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
+.pic_and_description {
+
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+#philisophical_pic {
+	height: auto;
+	width: 50%;
+	position: absolute;
+	z-index: 3;
+}
+
+#philisophical_pic {
+	max-width: 750px;
+	max-height: 750px;
+	border-radius: 80% 30% 40% 50% / 40% 70% 30% 70%
+}
+
+.headinganddescription {
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	transform: translateX(60%);
+  }
+  
+  #pic_heading {
+	position: absolute;
+	z-index: 3;
+	color: azure;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  #pic_description {
+	position: absolute;
+	z-index: 3;
+	color: azure;
+	padding-top: 50px;
+  }
+
+.Who_is_Evan {
+	position: relative;
+	text-align: center;
+	top: 1000px;
+  }
+  
+  #Who_is_Evan_Heading {
+	display: block;
+	margin: 0 auto;
+	z-index: 3;
+	color: azure;
+  }
+  
+  #Who_is_Evan_body {
+	display: block;
+	margin: 20px auto;
+	z-index: 3;
+	color: azure;
+	max-width: 800px;
+  }
+  
+  .TopRow, .LowerRow {
+	display: flex;
+	justify-content: center;
+  }
+
+  .photos {
+	position: absolute;
+	padding-top: 100px;
+
+  }
+  
+  .TopRow img, .LowerRow img {
+	display: inline-block;
+	width: 33.33%; /* set each image to 33.33% width to fit three images in a row */
+	padding: 30px;
+  }
+  
+
+.YoutubeVid {
+	
+	position: relative;
+	z-index: 4;
+	top: 2750px;
+	text-align: center;
+
+ }
+
+#MyVideo {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+}
+
+#Featured {
+color: aliceblue;
+}
+
+
+#Checkout {
+	color: aliceblue;
+}
+
+.tiktok-embed {
+	z-index: 4;
+	top: 2750px;
+	position: relative;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .containertwo {
+	position: absolute;
+	border-radius: 5px;
+	padding: 20px;
+	top: 4500px;
+	left: 25%;
+	right: 25%;
+  }
+
+  #ContactMe {
+	color: aliceblue;
+
+  }
