@@ -146,11 +146,11 @@ nav a:hover::before {
 }
 
 .headinganddescription {
-	max-width: 700px;
+	max-width: 40%;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	transform: translateX(60%);
+	transform: translateX(55%);
   }
   
   #pic_heading {
@@ -160,13 +160,16 @@ nav a:hover::before {
 	margin: 0 auto;
 	left: 50%;
 	transform: translateX(-50%);
+	font-family: Roundhand, cursive;
+	font-size: 75px;
   }
   
   #pic_description {
 	position: absolute;
 	z-index: 3;
 	color: azure;
-	padding-top: 50px;
+	padding-top: 100px;
+	font-size: 25px;
   }
 
 .Who_is_Evan {
@@ -204,7 +207,7 @@ nav a:hover::before {
   .TopRow img, .LowerRow img {
 	display: inline-block;
 	width: 33.33%; /* set each image to 33.33% width to fit three images in a row */
-	padding: 30px;
+	padding: px;
   }
   
 
