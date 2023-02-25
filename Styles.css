@@ -79,12 +79,17 @@ header ::after {
 	clear: both;
 }
 
-
+nav {
+	min-width: 768px;
+}
 
 nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: inline-flex; /* make the li elements inline-flex */
+	flex-wrap: wrap; /* enable wrapping */
+	justify-content: center; /* center the li elements */
 }
 	
 nav li {
@@ -126,18 +131,33 @@ nav a:hover::before {
 	width: 100%;
 }
 
+@media (max-width: 768px) {
+	nav {
+	  display: none; /* hide the entire nav element */
+	}
+  }
+
 .pic_and_description {
 
-	margin-top: 100px;
-	margin-left: 50px;
+	position: relative;
+	
+
 }
 
 #philisophical_pic {
+	top: 100px;
 	height: auto;
-	width: 50%;
+	width: 45%;
 	position: absolute;
 	z-index: 3;
+	left: 3%;
 }
+
+@media (max-width: 768px) {
+	#philisophical_pic {
+	  display: none;
+	}
+  }
 
 #philisophical_pic {
 	max-width: 750px;
@@ -147,10 +167,24 @@ nav a:hover::before {
 
 .headinganddescription {
 	max-width: 40%;
-	margin: 0 auto;
+	left: 75%;
 	position: relative;
-	text-align: center;
-	transform: translateX(55%);
+	transform: translateX(-50%);
+	top: 65px;
+	
+}
+
+@media (max-width: 768px) {
+	.headinganddescription {
+		position: absolute;
+		z-index: 3;
+		color: azure;
+		font-size: 75px;
+		text-align: center;
+		width: 100%;
+		left: 50%;
+		max-width: 90%;
+	}
   }
   
   #pic_heading {
@@ -158,24 +192,26 @@ nav a:hover::before {
 	z-index: 3;
 	color: azure;
 	margin: 0 auto;
-	left: 50%;
-	transform: translateX(-50%);
 	font-family: Roundhand, cursive;
 	font-size: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+
   }
   
   #pic_description {
 	position: absolute;
 	z-index: 3;
 	color: azure;
-	padding-top: 100px;
 	font-size: 25px;
+	top: 90px;
   }
 
 .Who_is_Evan {
 	position: relative;
 	text-align: center;
-	top: 1000px;
+	top: 750px;
   }
   
   #Who_is_Evan_Heading {
@@ -191,6 +227,7 @@ nav a:hover::before {
 	z-index: 3;
 	color: azure;
 	max-width: 800px;
+	font-size: 25px;
   }
   
   .TopRow, .LowerRow {
@@ -213,18 +250,17 @@ nav a:hover::before {
 
 .YoutubeVid {
 	
-	position: relative;
-	z-index: 4;
-	top: 2750px;
+	position: absolute;
+	top: 1750px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 	text-align: center;
 
  }
 
-#MyVideo {
-	position: relative;
-	margin: 0 auto;
-	display: block;
-}
+
 
 #Featured {
 color: aliceblue;
@@ -233,12 +269,18 @@ color: aliceblue;
 
 #Checkout {
 	color: aliceblue;
+
 }
 
 .tiktok-embed {
-	z-index: 4;
-	top: 2750px;
-	position: relative;
+	position: absolute;
+	top: 1950px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+
 }
 
 /* Style inputs with type="text", select elements and textareas */
