@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+
+
+@keyframes move-twinkle-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -5000px 2000px;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes move-stars-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 0 1000px;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+background: #000 url(stars.png) repeat-y top center;
+  animation: move-stars-back 200s linear infinite;
+}
+
+
+
+.stars,
+.twinkling {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+}
+
+.stars {
+    background: #000 url(stars.png) repeat top center;
+    background-repeat: repeat-y;
+	animation: move-stars-back 200s linear infinite;
+}
+
+.twinkling {
+    background: transparent url(twinkling.png) repeat top center;
+    background-repeat: repeat-y;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+
+
+body {
+	margin: 0;
+	font-weight: 300;
+	background-repeat: repeat;
+    background-size: cover;
+}
+
+
+
+header {
+	position: sticky;
+	
+
+}
+
+header ::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+nav {
+	min-width: 768px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-flex; /* make the li elements inline-flex */
+	flex-wrap: wrap; /* enable wrapping */
+	justify-content: center; /* center the li elements */
+}
+	
+nav li {
+	display: inline-block;
+	margin-left: 100px;
+	padding-top: 25px;
+	
+
+	position: relative
+}
+
+
+nav a {
+
+	color: whitesmoke;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: white;
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: whitesmoke;
+
+	position: absolute;
+	top: 0;
+	width: 0%;
+
+	transition: all ease-in-out 200ms;
+
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	nav {
+	  display: none; /* hide the entire nav element */
+	}
   }
+
+.YoutubeVid {
+	
+	position: relative;
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	text-align: center;
+
+ }
+
+#Featured {
+color: aliceblue;
+font-family: 'Gaegu', cursive;
+font-size: calc(2rem + 2vw);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.WelcomeHeading {
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Gaegu', cursive;
+	font-size: 2vw;
+	white-space: nowrap; /* Prevent text from wrapping to the next line */ /* Hide overflowing text */ /* Add an ellipsis when text overflows */ /* Adjust the width of the container to control the overflowing text */
   }
-  to {
-    transform: rotate(360deg);
+
+
+  #ArrowThing {
+	margin-top: -80%;
+	width: 100%;
+
+	
+
   }
-}
+
+  #SexyPhoto {
+	width: 17vw; /* Use vw units to make the picture responsive */
+	height: auto;
+	margin-right: 20%;
+  }
+
+  .WelcomePic {
+	position: absolute;
+	top: 40%;
+	right: 25%;
+	transform: translateY(-50%);
+	width: 17%;
+	height: auto;
+	display: flex;
+    align-items: center;
+  }
+  
+  .WelcomePage {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+  }
+  
+  
+  
+
